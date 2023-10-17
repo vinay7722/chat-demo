@@ -19,6 +19,10 @@ app.use(bodyParser.json());
 app.use("/onboarding", onboardingRouter);
 app.use("/chat", chatrouter);
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
 //to serve images folder
 app.use("/images", express.static("public/images"));
 
